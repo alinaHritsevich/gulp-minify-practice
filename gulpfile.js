@@ -1,11 +1,14 @@
-// Задача для копіювання HTML
+const gulp = require('gulp'); // ЦЕЙ РЯДОК ОБОВ'ЯЗКОВИЙ!
+
+// Твої старі задачі для мініфікації (вони вже там є)
+
+// Нові задачі для копіювання:
 exports.copyHTML = async () => {
-    return gulp.src('app/*.html')
-      .pipe(gulp.dest('public'));
-  }
-  
-  // Задача для копіювання JS
-  exports.copyJS = async () => {
-    return gulp.src('app/*.js')
-      .pipe(gulp.dest('public'));
-  }
+ return gulp.src('app/*.html')
+ .pipe(gulp.dest('public'));
+}
+
+exports.copyJS = async () => {
+ return gulp.src('app/*.js')
+ .pipe(gulp.dest('public'));
+}
