@@ -12,3 +12,4 @@ exports.copyJS = async () => {
  return gulp.src('app/*.js')
  .pipe(gulp.dest('public'));
 }
+exports.default = gulp.series(exports.copyHTML, exports.copyJS);

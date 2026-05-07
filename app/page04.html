@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 4</title>
+</head>
+<body>
+
+    <form> 
+        <label>Максимум 25 символів:</label><br> 
+        <textarea id="textarea"></textarea> <br>
+        <span id="rchars">25</span> символів залишилося.
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        var maxLength = 25;
+        $('textarea').on('keyup', function() { 
+            var textlen = maxLength - $(this).val().length; 
+            $('#rchars').text(textlen); 
+            
+            if($(this).val().length >= maxLength)
+                $(this).val($(this).val().substring(0, maxLength));
+        });
+    </script>
+
+</body>
+</html>
