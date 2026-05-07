@@ -1,8 +1,6 @@
-function mult() {
-    // Беремо числа з віконець
-    let num1 = document.getElementById("first_num").value;
-    let num2 = document.getElementById("second_num").value;
-    
-    // Множимо і показуємо результат
-    document.getElementById("result").innerHTML = "Результат: " + (num1 * num2);
-}
+document.getElementById("ageButton").onclick = function() {
+    var years = prompt("Скільки вам років?", 17); // поставив 17, як у тебе
+    if (years !== null) {
+        alert("Вам " + years + " років!");
+    }
+};
